@@ -20,6 +20,6 @@ if st.button("Log in", type="primary"):
         # Navigate to the score filtering page
         #st.experimental_rerun()
         sleep(0.5)
-        st.switch_page("pages/1-Introduction.py")
+        st.switch_page("pages/1Introduction.py")
     else:
         st.error("Incorrect username or password")
