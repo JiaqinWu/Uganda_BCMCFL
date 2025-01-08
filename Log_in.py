@@ -4,7 +4,7 @@ from navigation import make_sidebar
 
 make_sidebar()
 
-st.title("Welcome to Dashboard -- Uganda SCORE Survey")
+st.title("Welcome to Lesotho SCORE Survey Dashboard -- BCMCFL")
 
 st.write("Please log in to continue.")
 

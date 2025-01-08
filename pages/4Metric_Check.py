@@ -70,10 +70,7 @@ def app():
     module_selected1 = st.sidebar.selectbox('Select Module', df['Module'].unique())
     part_selected1 = st.sidebar.selectbox('Select Section', df[df['Module'] == module_selected1]['Section'].unique())
     st.sidebar.markdown(f"#### You selected: {part_selected1}")
-
-
-
-    
+ 
 
 
     # Show data based on selections

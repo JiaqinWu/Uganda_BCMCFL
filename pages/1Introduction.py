@@ -10,6 +10,54 @@ make_sidebar()
 # Import the dataset
 image = "CGHPI.png"
 
+# Define module content
+modules = {
+    "MODULE ONE: LEADERSHIP AND GOVERNANCE": """
+Leadership Capacity focuses on capacity functions that are typically the responsibility of senior leadership and executive board members (in the case of nonprofits) to guide or execute. Markers of effective organizational leadership include:
+
+- **Vision and Mission**: An organization’s vision and mission statements articulate its sense of purpose and direction. Effective vision and mission statements set parameters for what the organization will and will not do, inspire stakeholders, and set the basis for strategy.
+- **Leadership and Governance**: An organization’s governance model is a critical component for organizational functioning and sustainability. For nonprofits with executive boards, clear separation between the board and the organization’s leadership is important, as are documented roles and responsibilities.
+- **Strategy and Planning**: An organization’s vision and mission establish its aspirations, but its strategy articulates the means for achieving those goals. Research has shown that strategic planning boosts organizational capacity.
+- **Culture and Values**: Organizational culture affects every aspect of functioning – from leadership interactions to responses to challenges. Building a strong, values-based culture must be led and modeled by organizational leadership. Critical components include cultural competency, diversity, equity, and inclusion.
+
+**Suggested Respondents**: Organizational leadership, board members, management, technical leaders, and administrative leaders.
+""",
+    "MODULE TWO: PROGRAM MANAGEMENT": """
+Program implementation is more effective and sustainable if it is well-planned, documented, monitored, and well-coordinated. Key aspects include:
+
+- Policy and procedure manuals provide evidence of a structured, step-by-step approach to programming and serve as essential knowledge and risk management tools.
+- Coordination across functional teams or interagency programs reduces inefficiencies and ensures programs do not operate in isolation.
+- Performance management focuses on the ability to identify, collect, and monitor key performance indicators directly related to service provision.
+
+**Suggested Respondents**: Project/Program Director, Program/Project Manager, Program/Project Coordinator, Program/Project Advisor, Monitoring and Evaluation Advisor.
+""",
+    "MODULE THREE: TECHNICAL ASSISTANCE": """
+This module assesses the organization’s experience in providing direct or mentorship support for sustainable, high-quality health service delivery. Key aspects include:
+
+- Designing evidence-based programs, monitoring and supporting quality implementation, and making course corrections as needed.
+- Understanding and documenting relevant community and individual-level needs and assets through strategies like community needs assessment, asset mapping, and stakeholder focus groups.
+
+**Suggested Respondents**: Technical Director, Technical Advisor, CQI Advisor, and other health advisors.
+""",
+    "MODULE FOUR: DATA USE/CONTINUOUS QUALITY IMPROVEMENT": """
+This module evaluates the organization’s ability to effectively collect, manage, analyze, and utilize data to inform decision-making and strategy. Key components include:
+
+- **Data Collection Protocols**: Clear protocols identify who collects what data, when, from whom, and for what purpose.
+- **Measuring Impact**: Using validated tools to assess outcomes and align with service interventions and objectives.
+- **Continuous Quality Improvement (CQI)**: Organizations that leverage evaluation findings and link the evaluation process to decision-making demonstrate better improvement and adaptability.
+
+**Suggested Respondents**: Technical Director, Technical Advisor, CQI Advisor, Data Analyst.
+""",
+    "MODULE FIVE: SUSTAINABILITY": """
+This module evaluates the organization’s capacity for long-term viability and resilience. Key aspects include:
+
+- Maintaining consistent, high-quality care amidst changing healthcare landscapes, financial pressures, and evolving patient needs.
+- Strategies and innovations to ensure effective, efficient, and patient-centered care.
+
+**Suggested Respondents**: Leadership team, technical teams.
+"""
+}
+
 
 # Streamlit application
 def app():
@@ -25,34 +73,11 @@ def app():
     st.markdown(f"<h2 style='text-align: center'>{title}</h2>", unsafe_allow_html=True)
     
 
-    st.markdown("""
-    ### ACKNOWLEDGEMENT
+     # Display each module in a structured format
+    for module, content in modules.items():
+        st.markdown(f"### {module}")
+        st.markdown(content)
 
-    The “Sustainable Capacity of Local Organizations to Reach and End the HIV/AIDS Pandemic (SCORE)” Project is funded by the US Centers for Disease Control and Prevention (CDC)/PEPFAR through the global award NU2GGH002503. (September 2023 – September 2028).
-
-    Implemented by Georgetown University (Center for Global Health Practice and Impact, O’Neill Institute for National and Global Health Law, Center for Global Health Science and Security, Department of Global Health, McCourt School of Public Policy, McDonough Business School), and partners Sustainability Solutions and Aspen Institute, the SCORE Project is designed to provide governments, faith-based organizations and community-based organizations with support to sustain HIV and related disease outcome gains and strengthen local capacity for resilient and equitable country health systems. 
-
-    The SCORE Project is designed to provide governments, faith-based organizations, and community-based organizations with support to sustain HIV and related disease outcome gains and strengthen local capacity for resilient and equitable country health systems.
-
-    The SCORE HIV/AIDS Pandemic Organizational and Technical Needs Assessment Tool (SCORE-POT) is designed to assess existing organizational capacity to manage and deliver sustainable HIV programs. The tool reviews six modules:
-
-    1. **Module 1: Governance and Leadership**
-    2. **Module 2: Program Management**
-    3. **Module 3: Technical Assistance**
-    4. **Module 4: Data Use**
-    5. **Module 5: Sustainability**
-    6. **Module 6: Finance and Administration** - this module was implemented by Sustainability Solutions using the USAID Non-U.S. Organization Pre-Award Survey (NUPAS) tool. Data for this module is not included in this dashboard.
-
-    The SCORE-POT has been developed by the SCORE Project with additions, adaptations and modifications from the USAID Non-U.S. Organization Pre-Award Survey (NUPAS) tool, the PEPFAR Strategic Direction (September 2022), and the Americorps Organizational Assessment Tool, Washington DC (2017), and the PEPFAR Rapid Site-level Health Workforce Assessment Tool.
-    """)
-
-    st.markdown("""
-    ### INTRODUCTION
-
-    In Uganda, the SCORE Project is providing technical assistance to selected faith-based and community-based organizations to strengthen their organizational, leadership, and management capacities to manage and deliver sustainable HIV programs. The capacity and needs assessment is the first step towards building capacity and is conducted through the use of a standardized process or formal instrument to assess facets of organizational capacity and identify areas of relative strength and weakness.
-
-    Through applying the SCORE Pandemic Organizational and Technical Needs Assessment Tool (SCORE-POT), the Project will collaborate with your organization to assess institutional capacity to implement locally driven innovations to sustain HIV epidemic control, support long-term planning, address emerging challenges, and implement adaptive programming.
-    """)
                             
     st.markdown("""
     ### USAGE
