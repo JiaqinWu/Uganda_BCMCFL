@@ -81,7 +81,7 @@ def app():
     # Display the data
     if not filtered_data.empty:
         filtered_data['Section'] = filtered_data['Part']
-        records = filtered_data[['Module', 'Section', 'Question', 'Score', 'Level', 'Description','Comment','module','section','Qn']].sort_values(by=['module','section','Qn'])\
+        records = filtered_data[['Module', 'Section', 'Question', 'Score', 'Level', 'Description','module','section','Qn']].sort_values(by=['module','section','Qn'])\
             .reset_index().drop(columns=['index','module','section','Qn'])
         st.markdown(f"#### Questions with Score of {', '.join(scores_selected11)} are shown below:")
         st.dataframe(records)

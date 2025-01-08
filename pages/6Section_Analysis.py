@@ -102,7 +102,7 @@ def app():
                 x=alt.X('Score:Q', scale=alt.Scale(domain=[0, 6]),
                         axis=alt.Axis(values=[0, 1, 2, 3, 4, 5])),
                 color=alt.Color('Score:N', sort=alt.EncodingSortField(field='Qn', order='ascending')),
-                tooltip=['Question', 'Score', 'Level', 'Description','Comment']
+                tooltip=['Question', 'Score', 'Level', 'Description']
             ).properties(
                 width=900,
                 height=600,
@@ -129,7 +129,7 @@ def app():
             base = alt.Chart(filtered_data).mark_arc().encode(
                 theta=alt.Theta('Score:Q').stack(True),  
                 color=alt.Color('Question:N',sort=alt.EncodingSortField(field='Qn', order='ascending')),
-                tooltip=['Question', 'Score', 'Level', 'Description','Comment'] 
+                tooltip=['Question', 'Score', 'Level', 'Description'] 
             )
 
             pie = base.mark_arc(outerRadius = 120)
@@ -156,8 +156,7 @@ def app():
                                     'Question': True,
                                     'Score': True,  
                                     'Level': True,  
-                                    'Description': True,
-                                    'Comment':True
+                                    'Description': True
                                 })
             
             fig.update_traces(textposition='bottom center')
@@ -173,7 +172,7 @@ def app():
         
         else:
             filtered_data['Section'] = filtered_data['Part']
-            records = filtered_data[['Module','Section','Question','Score','Level','Description','Comment']].reset_index().drop(columns='index')
+            records = filtered_data[['Module','Section','Question','Score','Level','Description']].reset_index().drop(columns='index')
             st.markdown(f"#### Comparison of Score by Questions within {module_selected1}: {part_selected} are shown below:")
             st.dataframe(records)
 
