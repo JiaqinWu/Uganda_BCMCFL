@@ -18,9 +18,10 @@ institution_profile = {
     "Organization Name": "Baylor College of Medicine Children’s Foundation Lesotho (BCMCFL)",
     "Organization Type": """The Baylor College of Medicine Children’s Foundation- Lesotho (BCMCFL) was formed in 2005 as a non-governmental organization resulting from a public-private partnership between the Baylor College of Medicine International Paediatrics AIDS Initiative (BIPAI) in Houston, Texas, USA and the Lesotho Ministry of Health. 
 
-The Comprehensive High Impact Community-Based HIV Prevention, Testing and Treatment Initiation for Sustained Epidemic Control in Lesotho PEPFAR (CoHIP SEC) Project is a five-year project (2022 September – 2027 September) funded by Centers for Disease Control and Prevention (CDC) implemented by BCMCFL. The Project operates in 4 districts; Berea, Leribe, Quthing and Qacha’s Nek targeting adolescents and young people (AYP), men, children and at risk population"""
+The Comprehensive High Impact Community-Based HIV Prevention, Testing and Treatment Initiation for Sustained Epidemic Control in Lesotho PEPFAR (CoHIP SEC) Project is a five-year project (2022 September – 2027 September) funded by Centers for Disease Control and Prevention (CDC) implemented by BCMCFL. The Project operates in 4 districts; Berea, Leribe, Quthing and Qacha’s Nek targeting adolescents and young people (AYP), men, children and at risk population.""",
     "Baseline Assessment Date": "12 December 2024"
 }
+
 
 # Streamlit App
 def app():
