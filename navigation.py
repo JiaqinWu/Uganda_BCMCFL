@@ -40,6 +40,8 @@ def make_sidebar():
             st.switch_page("Log_in.py")
 
 
+
+
 def logout():
     st.session_state.logged_in = False
     st.info("Logged out successfully!")
